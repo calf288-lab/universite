@@ -1,0 +1,6 @@
+{
+  "name": "Сайт-Продавец с ИИ 24/7",
+  "description": "Универсальный сайт-продавец нового поколения с ИИ-консультантом 24/7 в палитре Emerald & Gold",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
