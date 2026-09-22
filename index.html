@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Сайт-продавец нового поколения с ИИ-агентом 24/7. Превращает посетителей в готовые заявки в Telegram, пока вы работаете или отдыхаете. Подходит для любого бизнеса на B2B и B2C услугах.">
-  <meta property="og:title" content="SiteSeller AI | Сайт-Продавец с ИИ-Консультантом 24/7">
-  <meta property="og:description" content="Превращает посетителей в готовые заявки в Telegram, пока вы работаете или отдыхаете. Подходит для любого бизнеса на B2B и B2C услугах.">
+  <meta name="description" content="АГЕНТ24 — ИИ-отдел продаж для вашего сайта 24/7. Превращает посетителей в готовые заявки в Telegram. Пилот 14 дней бесплатно.">
+  <meta property="og:title" content="АГЕНТ24 | ИИ-отдел продаж 24/7">
+  <meta property="og:description" content="ИИ-агент квалифицирует клиентов, считает смету и отправляет заявки в Telegram 24/7">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#060e0a">
-  <title>SiteSeller AI | Сайт-Продавец с ИИ-Консультантом 24/7</title>
+  <title>АГЕНТ24 | ИИ-отдел продаж для вашего сайта 24/7</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1287,11 +1287,89 @@
       background: rgba(6, 10, 8, 0.7);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-md);
-      padding: 24px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .form-input {
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0 16px;
+      color: #ffffff;
+      font-size: 14.5px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 40px 0;
+      background: #030805;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13.5px;
+      color: var(--ink-subtle);
+    }
+
+    /* Mobile Sticky Bar */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(6, 14, 10, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--card-border);
+      padding: 12px 16px;
+      z-index: 100;
+    }
+
+    @media (max-width: 820px) {
+      .nav-links, .btn-tg-nav { display: none; }
+      .menu-toggle { display: grid; }
+      .hero-grid, .cta-container, .compare-container { grid-template-columns: 1fr; }
+      .stats-grid, .niches-grid, .benefits-grid, .process-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .mobile-sticky-bar { display: flex; gap: 10px; }
+      .cta-container { padding: 32px 20px; }
     }
   </style>
 </head>
 <body>
+
   <div class="bg-grid-pattern"></div>
   <div class="ambient-glow-top"></div>
   <div class="ambient-glow-center"></div>
@@ -1300,13 +1378,13 @@
   <header class="header">
     <div class="container nav">
       <a href="#" class="brand">
-        <div class="brand-mark">⚡</div>
-        <span>SiteSeller <span style="color:var(--primary);">AI</span></span>
-        <span class="brand-badge">24/7 Live</span>
+        <span class="brand-mark">⚡</span>
+        <span>АГЕНТ<span style="color: var(--primary);">24</span></span>
+        <span class="brand-badge">ИИ-ОТДЕЛ ПРОДАЖ</span>
       </a>
 
       <nav class="nav-links">
-        <a href="#simulator">Демо-чат</a>
+        <a href="#demo">Как работает</a>
         <a href="#niches">Ниши</a>
         <a href="#benefits">Преимущества</a>
         <a href="#process">Этапы</a>
@@ -1314,146 +1392,594 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="https://t.me/your_telegram" target="_blank" class="btn-tg-nav">
+        <a href="https://t.me/" target="_blank" class="btn-tg-nav">
           <span class="btn-tg-dot"></span>
-          <span>Telegram</span>
+          Telegram ИИ-Демо
         </a>
-        <a href="#cta" class="btn-callback-nav">Заказать сайт</a>
+        <button class="btn-callback-nav" onclick="document.getElementById('cta-form').scrollIntoView();">
+          Заказать сайт
+        </button>
         <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
       </div>
     </div>
 
     <div class="mobile-dropdown" id="mobileDropdown">
-      <a href="#simulator" onclick="toggleMenu()">Демо-чат</a>
-      <a href="#niches" onclick="toggleMenu()">Ниши</a>
-      <a href="#benefits" onclick="toggleMenu()">Преимущества</a>
-      <a href="#process" onclick="toggleMenu()">Этапы</a>
-      <a href="#reviews" onclick="toggleMenu()">Отзывы</a>
-      <a href="#cta" onclick="toggleMenu()" class="btn-glow" style="margin-top:10px; width:100%;">Заказать сайт</a>
+      <a href="#demo" onclick="closeMobileMenu()">Как работает</a>
+      <a href="#niches" onclick="closeMobileMenu()">Ниши</a>
+      <a href="#benefits" onclick="closeMobileMenu()">Преимущества</a>
+      <a href="#process" onclick="closeMobileMenu()">Этапы</a>
+      <a href="#reviews" onclick="closeMobileMenu()">Отзывы</a>
+      <a href="https://t.me/" target="_blank" style="color: #34d399;">⚡ Написать в Telegram</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero" id="demo">
     <div class="container hero-grid">
-      <div class="hero-text-col">
+      <div class="hero-text">
         <div class="hero-status-badge">
           <div class="status-dot-wrapper">
             <div class="status-dot"></div>
             <div class="status-ring"></div>
           </div>
-          <span>ИИ-консультант активен и готов к работе</span>
+          🎯 Пилот 14 дней: если ИИ не принесёт ни одной заявки — бесплатно
         </div>
 
-        <h1>Сайт, который <span class="text-gradient">продает за вас</span> 24/7 без менеджеров</h1>
-
+        <h1>ИИ-отдел продаж для вашего сайта <span class="text-gradient">24/7</span></h1>
+        
         <p class="hero-subtitle">
-          Умная платформа нового поколения: квалифицирует посетителей в диалоге, рассчитывает стоимость услуг и отправляет готовые заявки прямо вам в Telegram.
+          АГЕНТ24 квалифицирует клиентов, рассчитывает стоимость и отправляет готовые заявки в ваш Telegram. Работает круглосуточно без зарплаты и отгулов.
         </p>
 
         <div class="hero-actions">
-          <a href="#cta" class="btn-glow">Запустить продажи с ИИ</a>
-          <a href="#simulator" class="btn-secondary">Протестировать демо</a>
+          <button class="btn-glow" onclick="document.getElementById('cta-form').scrollIntoView();">
+            Получить демо для вашей ниши →
+          </button>
+          <a href="https://t.me/" target="_blank" class="btn-secondary">
+            Чат с ИИ в Telegram
+          </a>
         </div>
 
         <div class="hero-tags">
-          <div class="hero-tag-item"><span class="tag-check">✓</span> Ответ за 2 секунды</div>
-          <div class="hero-tag-item"><span class="tag-check">✓</span> Интеграция с Telegram</div>
-          <div class="hero-tag-item"><span class="tag-check">✓</span> Без зарплаты и отпусков</div>
+          <span class="hero-tag-item"><span class="tag-check">✓</span> Запуск за 3-5 дней</span>
+          <span class="hero-tag-item"><span class="tag-check">✓</span> Интеграция с Telegram / CRM</span>
+          <span class="hero-tag-item"><span class="tag-check">✓</span> Без зарплаты и отгулов</span>
         </div>
       </div>
 
-      <!-- Simulator -->
-      <div class="hero-sim-card" id="simulator">
+      <!-- Simulator Card -->
+      <div class="hero-sim-card">
         <div class="sim-top-bar">
           <div class="sim-window-dots">
-            <div class="sim-dot r"></div>
-            <div class="sim-dot y"></div>
-            <div class="sim-dot g"></div>
+            <span class="sim-dot r"></span>
+            <span class="sim-dot y"></span>
+            <span class="sim-dot g"></span>
           </div>
-          <div class="sim-status-pill">● AI Online</div>
+          <div class="sim-status-pill">
+            <span class="status-dot"></span> ИИ-Симулятор
+          </div>
         </div>
 
         <div class="sim-niche-header">
-          <span>Выберите тематику демо:</span>
+          <span>Выберите нишу для теста:</span>
         </div>
 
         <div class="sim-niche-tabs">
           <button class="niche-btn is-active" onclick="switchNiche('repair')">Ремонт</button>
+          <button class="niche-btn" onclick="switchNiche('legal')">Юристы</button>
+          <button class="niche-btn" onclick="switchNiche('barrels')">Пром. Емкости</button>
           <button class="niche-btn" onclick="switchNiche('auto')">Автосервис</button>
-          <button class="niche-btn" onclick="switchNiche('b2b')">B2B Услуги</button>
+          <button class="niche-btn" onclick="switchNiche('realty')">Недвижимость</button>
+          <button class="niche-btn" onclick="switchNiche('beauty')">Салоны</button>
         </div>
 
-        <div class="sim-dialog-box" id="dialogBox">
-          <div class="sim-msg bot">Здравствуйте! Подсказать стоимость ремонта вашей квартиры?</div>
-          <div class="sim-msg user">Да, новостройка 60 кв.м</div>
-          <div class="sim-msg bot">Отлично! Ориентировочная стоимость капитального ремонта «под ключ» — от 420 000 ₽. Оформить заявку на выезд замерщика?</div>
-          <div class="sim-telegram-card">
-            <div class="sim-tg-icon">✈</div>
-            <div><strong>Заявка отправлена в Telegram!</strong><br>Телефон: +7 (9XX) XXX-XX-XX</div>
-          </div>
+        <div class="sim-dialog-box" id="simDialog">
+          <!-- JS dynamic insertion -->
         </div>
 
         <div class="sim-input-row">
-          <input type="text" class="sim-fake-input" placeholder="Напишите сообщение..." readonly>
-          <button class="sim-send-btn" aria-label="Отправить">➤</button>
+          <input type="text" class="sim-fake-input" id="simInput" placeholder="Введите ваш вопрос..." onkeypress="handleKeyPress(event)">
+          <button class="sim-send-btn" onclick="sendSimMessage()">➔</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
+  <!-- Metrics -->
   <section class="stats-section">
     <div class="container stats-grid">
       <div class="stat-card">
-        <div class="stat-num">x<span class="stat-accent">3.5</span></div>
-        <div class="stat-label">Рост конверсии сайта в заявку</div>
+        <div class="stat-num">3.8<span class="stat-accent">х</span></div>
+        <div class="stat-label">Рост конверсии сайта в готовую заявку</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num"><span class="stat-accent">&lt; 3</span> сек</div>
-        <div class="stat-label">Скорость первого ответа клиенту</div>
+        <div class="stat-num">&lt;15<span class="stat-accent">сек</span></div>
+        <div class="stat-label">Скорость ответа ИИ в любое время суток</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num"><span class="stat-accent">24 / 7</span></div>
-        <div class="stat-label">Работа без выходных и ночных смен</div>
+        <div class="stat-num">100<span class="stat-accent">%</span></div>
+        <div class="stat-label">Передача квалифицированных лидов в Telegram</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num"><span class="stat-accent">100%</span></div>
-        <div class="stat-label">Передача целевых лидов в Telegram</div>
+        <div class="stat-num">24<span class="stat-accent">/7</span></div>
+        <div class="stat-label">Работа без выходных, больничных и праздников</div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section" id="cta">
+  <!-- How It Works Section -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Простая интеграция</span>
+        <h2 class="section-title">Как это работает</h2>
+        <p class="section-desc">Всего 3 шага до потока готовых заявок в ваш Telegram</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h3>Ставим код виджета на сайт</h3>
+          <p>Одна строчка кода — и ИИ-агент появляется на вашем сайте за 5 минут</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h3>ИИ квалифицирует и считает смету</h3>
+          <p>Агент ведёт диалог с клиентом, выявляет потребности и рассчитывает стоимость</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h3>Заявка с расчётом падает в Telegram</h3>
+          <p>Готовая карточка лида со всеми деталями приходит вам мгновенно</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Niches Showcase -->
+  <section class="section" id="niches">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Универсальность</span>
+        <h2 class="section-title">Работает в любой сфере B2B и B2C</h2>
+        <p class="section-desc">ИИ-агент адаптируется под скрипты, прайс-листы и базу знаний вашего бизнеса.</p>
+      </div>
+
+      <div class="niches-grid">
+        <div class="niche-card">
+          <div class="niche-top">
+            <div class="niche-icon-row">
+              <div class="niche-icon">🔨</div>
+              <span class="niche-badge">+320% лидов</span>
+            </div>
+            <h3>Ремонт и Строительство</h3>
+            <div class="niche-dialog-sample">
+              <strong>ИИ-Агент:</strong>
+              «Расчитаю примерную смету за 1 минуту. Уточните площадь объекта и тип ремонта?»
+            </div>
+          </div>
+          <div class="niche-metrics">
+            <span>Конверсия: <b class="niche-metric-highlight">12.4%</b></span>
+            <span>Авто-расчет сметы</span>
+          </div>
+        </div>
+
+        <div class="niche-card">
+          <div class="niche-top">
+            <div class="niche-icon-row">
+              <div class="niche-icon">⚖️</div>
+              <span class="niche-badge">Квалификация 24/7</span>
+            </div>
+            <h3>Юридические услуги</h3>
+            <div class="niche-dialog-sample">
+              <strong>ИИ-Агент:</strong>
+              «Оценка перспектив дела. Опишите кратко вашу ситуацию для юриста?»
+            </div>
+          </div>
+          <div class="niche-metrics">
+            <span>Конверсия: <b class="niche-metric-highlight">9.8%</b></span>
+            <span>Сбор анамнеза</span>
+          </div>
+        </div>
+
+        <div class="niche-card">
+          <div class="niche-top">
+            <div class="niche-icon-row">
+              <div class="niche-icon"></div>
+              <span class="niche-badge">B2B Производство</span>
+            </div>
+            <h3>Пром. Емкости & Тара</h3>
+            <div class="niche-dialog-sample">
+              <strong>ИИ-Агент:</strong>
+              «Рассчитаю объем, логистику фурами и оптовую скидку за 30 секунд.»
+            </div>
+          </div>
+          <div class="niche-metrics">
+            <span>Конверсия: <b class="niche-metric-highlight">14.1%</b></span>
+            <span>Логистический калькулятор</span>
+          </div>
+        </div>
+
+        <div class="niche-card">
+          <div class="niche-top">
+            <div class="niche-icon-row">
+              <div class="niche-icon">🚗</div>
+              <span class="niche-badge">Запись в сервис</span>
+            </div>
+            <h3>Автосервис и Детейлинг</h3>
+            <div class="niche-dialog-sample">
+              <strong>ИИ-Агент:</strong>
+              «Подберу удобное время и сориентирую по стоимости запчастей и работ.»
+            </div>
+          </div>
+          <div class="niche-metrics">
+            <span>Конверсия: <b class="niche-metric-highlight">11.2%</b></span>
+            <span>Запись на свободное окно</span>
+          </div>
+        </div>
+
+        <div class="niche-card">
+          <div class="niche-top">
+            <div class="niche-icon-row">
+              <div class="niche-icon">🏢</div>
+              <span class="niche-badge">Высокий чек</span>
+            </div>
+            <h3>Недвижимость</h3>
+            <div class="niche-dialog-sample">
+              <strong>ИИ-Агент:</strong>
+              «Подберу 3 подходящие квартиры в новостройках с ипотекой от 4.8%.»
+            </div>
+          </div>
+          <div class="niche-metrics">
+            <span>Конверсия: <b class="niche-metric-highlight">8.6%</b></span>
+            <span>Подбор каталога</span>
+          </div>
+        </div>
+
+        <div class="niche-card">
+          <div class="niche-top">
+            <div class="niche-icon-row">
+              <div class="niche-icon">✨</div>
+              <span class="niche-badge">Мгновенный ответ</span>
+            </div>
+            <h3>Салоны и Клиники</h3>
+            <div class="niche-dialog-sample">
+              <strong>ИИ-Агент:</strong>
+              «Отвечу на вопросы по процедурам, противопоказаниям и забронирую время.»
+            </div>
+          </div>
+          <div class="niche-metrics">
+            <span>Конверсия: <b class="niche-metric-highlight">15.3%</b></span>
+            <span>Подтверждение визита</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits & Comparison -->
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Почему АГЕНТ24</span>
+        <h2 class="section-title">В чем отличие от обычных сайтов</h2>
+        <p class="section-desc">Обычные сайты теряют до 95% посетителей. Наш ИИ вовлекает каждого посетителя в диалог.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🧠</div>
+          <h3>Глубокий контекст</h3>
+          <p>ИИ не просто отвечает по скрипту, а помнит всю историю разговора, отвечая на сложные технические вопросы.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Мгновенный контакт</h3>
+          <p>Клиент получает ответ в секунду обращения, пока его интерес на пике, а не через 2 часа, когда он ушел к конкурентам.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📲</div>
+          <h3>Заявки в Telegram</h3>
+          <p>Готовая карточка клиента со всеми ответами, номером телефона и деталями задачи приходит прямо вам в мессенджер.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Без доп. расходов</h3>
+          <p>Вам не нужно расширять штат отделов продаж для ночных смен и выходных дней.</p>
+        </div>
+      </div>
+
+      <div class="compare-container">
+        <div class="compare-side bad">
+          <span class="compare-badge">Обычный лендинг / сайт</span>
+          <ul class="compare-list">
+            <li class="compare-item">❌ <b>Пассивные формы:</b> Клиенты не хотят заполнять "Имя и Телефон".</li>
+            <li class="compare-item">❌ <b>Долгое ожидание:</b> Менеджер перезванивает через 30-60 минут.</li>
+            <li class="compare-item">❌ <b>Низкая конверсия:</b> Лишь 1-2% посетителей оставляют заявку.</li>
+            <li class="compare-item">❌ <b>Слив бюджета:</b> Ночной трафик из рекламы уходит вникуда.</li>
+          </ul>
+        </div>
+
+        <div class="compare-side good">
+          <span class="compare-badge">Сайт с ИИ АГЕНТ24</span>
+          <ul class="compare-list">
+            <li class="compare-item">✅ <b>Живой диалог:</b> ИИ вовлекает с первой секунды нахождения на сайте.</li>
+            <li class="compare-item">✅ <b>Ответ за 2 секунды:</b> Работает круглые сутки без задержек.</li>
+            <li class="compare-item">✅ <b>Высокая конверсия:</b> До 8-15% за счет интерактивного расчета.</li>
+            <li class="compare-item">✅ <b>Окупаемость:</b> Каждая копейка рекламного бюджета приносит результат.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Простой запуск</span>
+        <h2 class="section-title">4 шага до готового ИИ-Продавца</h2>
+        <p class="section-desc">Берем всю техническую часть и обучение ИИ на себя.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h3>Анализ и Брифинг</h3>
+          <p>Изучаем ваш продукт, прайс-лист, частые вопросы клиентов и целевую аудиторию.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h3>Обучение ИИ-Агента</h3>
+          <p>Загружаем базу знаний, настраиваем тональность общения и правила квалификации лидов.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h3>Сборка и Интеграция</h3>
+          <p>Верстаем премиальный веб-интерфейс и подключаем мгновенные уведомления в Telegram.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">04</div>
+          <h3>Тест и Запуск</h3>
+          <p>Проводим стресс-тест диалогов, передаем вам ключи управления и запускаем трафик.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Результаты клиентов</span>
+        <h2 class="section-title">Отзывы владельцев бизнеса</h2>
+        <p class="section-desc">Реальные цифры и впечатления тех, кто уже внедрил АГЕНТ24.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-top">
+            <div class="review-author">
+              <div class="review-avatar">ВМ</div>
+              <div>
+                <div class="review-meta-name">Виктор М. <span class="review-badge-verified">✓ Подтвержден</span></div>
+                <div class="review-meta-niche">Студия ремонта и отделки (Ижевск)</div>
+              </div>
+            </div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-result-pill">🚀 Рост заявок в 3.2 раза</div>
+          <p class="review-quote">
+            «Раньше люди просто заходили на сайт и уходили. После интеграции ИИ-агента за первые 2 недели получили 42 квалифицированные заявки с готовым описанием объектов. Клиенты в восторге от быстрого расчета сметы!»
+          </p>
+          <div class="review-footer">
+            <span>Период использования: 4 месяца</span>
+            <span class="review-metric-tag">+1.4M ₽ выручки</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-top">
+            <div class="review-author">
+              <div class="review-avatar">АР</div>
+              <div>
+                <div class="review-meta-name">Андрей Р. <span class="review-badge-verified">✓ Подтвержден</span></div>
+                <div class="review-meta-niche">Производство ПЭТ и ПНД тары</div>
+              </div>
+            </div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-result-pill">🎯 Ночной трафик стал приносить деньги</div>
+          <p class="review-quote">
+            «У нас оптовые поставки бочек по всей РФ. ИИ-консультант отлично считает вместимость еврофур и дает предварительный расчет логистики. Вся информация падает в Telegram менеджеру. Супер решение!»
+          </p>
+          <div class="review-footer">
+            <span>Период использования: 6 месяцев</span>
+            <span class="review-metric-tag">Окупаемость 3 дня</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Lead Section -->
+  <section class="cta-section" id="cta-form">
     <div class="container cta-container">
       <div class="cta-left">
-        <h2>Готовы превратить ваш сайт в отдел продаж?</h2>
-        <p>Оставьте заявку, и мы продемонстрируем работы ИИ-агента под вашу нишу с расчетом окупаемости.</p>
-
+        <h2>Готовы увеличить конверсию вашего сайта?</h2>
+        <p>Оставьте заявку. Мы бесплатно продемонстрируем, как ИИ-агент будет вести диалог именно с вашими клиентами.</p>
+        
         <div class="cta-contacts-block">
-          <a href="https://t.me/your_telegram" target="_blank" class="cta-tg-card">
-            <div class="cta-tg-icon">✈</div>
+          <a href="https://t.me/" target="_blank" class="cta-tg-card">
+            <div class="cta-tg-icon">✈️</div>
             <div>
-              <div style="font-weight:700; font-size:15px;">Написать напрямую в Telegram</div>
-              <div style="font-size:13px; color:var(--ink-muted);">Отвечаем в течение 5 минут</div>
+              <div style="font-weight: 700; font-size: 15px;">Быстрый ответ в Telegram</div>
+              <div style="font-size: 13px; color: var(--ink-muted);">Напишите нам напрямую в мессенджер</div>
             </div>
           </a>
         </div>
       </div>
 
       <div class="form-box">
-        <!-- Форма обратной связи -->
-        <form style="display:flex; flex-direction:column; gap:14px;">
-          <input type="text" placeholder="Ваше имя" style="width:100%; height:46px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:0 14px; color:#fff; outline:none;">
-          <input type="text" placeholder="Телефон или Telegram" style="width:100%; height:46px; border-radius:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:0 14px; color:#fff; outline:none;">
-          <button type="button" class="btn-glow" style="width:100%;">Получить консультацию</button>
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label for="userName">Ваше имя</label>
+            <input type="text" id="userName" class="form-input" placeholder="Александр" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label for="userPhone">Телефон / WhatsApp</label>
+            <input type="tel" id="userPhone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label for="userNiche">Ваша сфера бизнеса</label>
+            <input type="text" id="userNiche" class="form-input" placeholder="Например: Ремонт квартир / B2B опт">
+          </div>
+
+          <button type="submit" class="btn-glow" style="width: 100%; min-height: 50px;">
+            Получить ИИ-Демо бесплатно
+          </button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        © 2026 АГЕНТ24. Все права защищены.
+      </div>
+      <div>
+        ИИ-отдел продаж для вашего сайта 24/7
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="https://t.me/" target="_blank" class="btn-tg-nav" style="flex: 1; justify-content: center;">
+      <span class="btn-tg-dot"></span> Telegram ИИ
+    </a>
+    <button class="btn-glow" style="flex: 1; height: 42px; font-size: 13px;" onclick="document.getElementById('cta-form').scrollIntoView();">
+      Заказать сайт
+    </button>
+  </div>
+
+  <!-- Scripts -->
   <script>
+    // Simulator Data Store
+    const nicheScenarios = {
+      repair: {
+        welcome: "Здравствуйте! Я ИИ-агент компании. Помогу рассчитать стоимость ремонта и материалы. Какая у вас площадь помещения?",
+        reply: "Отлично! Для площади {{val}} м² ориентировочная стоимость работ — от {{calc}} руб. Отправить вам полную смету в Telegram?",
+        tgCard: "Заявка #108: Ремонт {{val}} м² | Готовность к замеру"
+      },
+      legal: {
+        welcome: "Приветствую! Я юридический ИИ-ассистент. В какой сфере вам требуется помощь (банкротство, недвижимость, споры)?",
+        reply: "Понял вас. В сфере {{val}} у нас 98% выигранных дел. Оставьте номер, юрист изучит документы через 5 минут.",
+        tgCard: "Заявка #109: Юр. Консультация по {{val}}"
+      },
+      barrels: {
+        welcome: "Здравствуйте! Я ИИ-консультант заводского склада емкостей. Какого объема бочки/еврокубы вас интересуют?",
+        reply: "При заказе {{val}} шт. действуют оптовые цены + спец-условия по логистике (фура 252 шт.). Оформить КП?",
+        tgCard: "Заявка #110: Запрос опт. цен на {{val}} шт."
+      },
+      auto: {
+        welcome: "Добрый день! Рассчитаю стоимость ремонта или ТО авто. Укажите марку и модель вашего автомобиля?",
+        reply: "Принято! На {{val}} есть в наличии оригинальные запчасти и качественные аналоги. Записать вас на диагностику?",
+        tgCard: "Заявка #111: Запись на ТО {{val}}"
+      },
+      realty: {
+        welcome: "Здравствуйте! Подберу лучшую новостройку с ипотекой. В каком районе рассматриваете покупку?",
+        reply: "В районе {{val}} сейчас есть 4 отличных объекта со скидкой до 8%. Прислать планировки в WhatsApp/Telegram?",
+        tgCard: "Заявка #112: Подбор новостройки в {{val}}"
+      },
+      beauty: {
+        welcome: "Привет! Я записать вас на процедуру или проконсультировать по услугам? На какую дату планируете визит?",
+        reply: "На {{val}} есть свободные окна в 14:00 и 17:30. Забронировать за вами место?",
+        tgCard: "Заявка #113: Бронь визита на {{val}}"
+      }
+    };
+
+    let currentNiche = 'repair';
+
+    function switchNiche(nicheKey) {
+      currentNiche = nicheKey;
+      
+      // Update Tab UI
+      const buttons = document.querySelectorAll('.niche-btn');
+      buttons.forEach(btn => btn.classList.remove('is-active'));
+      event.target.classList.add('is-active');
+
+      // Reset Chat
+      const dialogBox = document.getElementById('simDialog');
+      const scenario = nicheScenarios[nicheKey];
+      
+      dialogBox.innerHTML = `
+        <div class="sim-msg bot">
+          ${scenario.welcome}
+        </div>
+      `;
+    }
+
+    function sendSimMessage() {
+      const input = document.getElementById('simInput');
+      const val = input.value.trim();
+      if(!val) return;
+
+      const dialogBox = document.getElementById('simDialog');
+      const scenario = nicheScenarios[currentNiche];
+
+      // Add User Message
+      dialogBox.innerHTML += `<div class="sim-msg user">${val}</div>`;
+      input.value = '';
+      dialogBox.scrollTop = dialogBox.scrollHeight;
+
+      // Calculate pseudo metrics if number
+      const num = parseInt(val) || 50;
+      const calcPrice = (num * 4500).toLocaleString('ru-RU');
+
+      // Bot Response after delay
+      setTimeout(() => {
+        let botText = scenario.reply.replace('{{val}}', val).replace('{{calc}}', calcPrice);
+        
+        dialogBox.innerHTML += `<div class="sim-msg bot">${botText}</div>`;
+        
+        // Show Telegram Card Generation
+        setTimeout(() => {
+          dialogBox.innerHTML += `
+            <div class="sim-telegram-card">
+              <div class="sim-tg-icon">✈️</div>
+              <div>
+                <strong style="display:block; color:#fff;">Передано в Telegram CRM:</strong>
+                ${scenario.tgCard.replace('{{val}}', val)}
+              </div>
+            </div>
+          `;
+          dialogBox.scrollTop = dialogBox.scrollHeight;
+        }, 600);
+
+        dialogBox.scrollTop = dialogBox.scrollHeight;
+      }, 500);
+    }
+
+    function handleKeyPress(e) {
+      if(e.key === 'Enter') sendSimMessage();
+    }
+
+    // Init first view
+    document.addEventListener('DOMContentLoaded', () => {
+      const dialogBox = document.getElementById('simDialog');
+      dialogBox.innerHTML = `
+        <div class="sim-msg bot">
+          ${nicheScenarios.repair.welcome}
+        </div>
+      `;
+    });
+
+    // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileDropdown = document.getElementById('mobileDropdown');
 
@@ -1461,48 +1987,14 @@
       mobileDropdown.classList.toggle('is-open');
     });
 
-    function toggleMenu() {
+    function closeMobileMenu() {
       mobileDropdown.classList.remove('is-open');
     }
 
-    function switchNiche(niche) {
-      const buttons = document.querySelectorAll('.niche-btn');
-      buttons.forEach(btn => btn.classList.remove('is-active'));
-      event.target.classList.add('is-active');
-
-      const dialogBox = document.getElementById('dialogBox');
-      
-      if(niche === 'repair') {
-        dialogBox.innerHTML = `
-          <div class="sim-msg bot">Здравствуйте! Подсказать стоимость ремонта вашей квартиры?</div>
-          <div class="sim-msg user">Да, новостройка 60 кв.м</div>
-          <div class="sim-msg bot">Отлично! Ориентировочная стоимость капитального ремонта «под ключ» — от 420 000 ₽. Оформить заявку на выезд замерщика?</div>
-          <div class="sim-telegram-card">
-            <div class="sim-tg-icon">✈</div>
-            <div><strong>Заявка отправлена в Telegram!</strong><br>Телефон: +7 (9XX) XXX-XX-XX</div>
-          </div>
-        `;
-      } else if(niche === 'auto') {
-        dialogBox.innerHTML = `
-          <div class="sim-msg bot">Приветствуем! Нужна диагностика или ремонт авто?</div>
-          <div class="sim-msg user">Замена тормозных колодок на BMW X5</div>
-          <div class="sim-msg bot">Замена передних колодок — 3 500 ₽ + детали. Записать вас на сегодня в 16:00?</div>
-          <div class="sim-telegram-card">
-            <div class="sim-tg-icon">✈</div>
-            <div><strong>Заявка отправлена в Telegram!</strong><br>Услуга: Замена колодок (BMW X5)</div>
-          </div>
-        `;
-      } else if(niche === 'b2b') {
-        dialogBox.innerHTML = `
-          <div class="sim-msg bot">Добрый день! Вы ищете подрядчика для автоматизации бизнеса?</div>
-          <div class="sim-msg user">Интересует внедрение CRM и ИИ-бота</div>
-          <div class="sim-msg bot">Готовы рассчитать КП под ваши задачи. Куда выслать примеры кейсов и прайс?</div>
-          <div class="sim-telegram-card">
-            <div class="sim-tg-icon">✈</div>
-            <div><strong>Заявка отправлена в Telegram!</strong><br>Запрос: Внедрение CRM + ИИ</div>
-          </div>
-        `;
-      }
+    // Form Handling
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Спасибо! Ваша заявка принята. ИИ-демонстрация отправлена в обработку.');
     }
   </script>
 </body>
