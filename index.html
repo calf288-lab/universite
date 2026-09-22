@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Сайт-продавец нового поколения с ИИ-агентом 24/7. Превращает посетителей в готовые заявки в Telegram, пока вы работаете или отдыхаете. Подходит для любого бизнеса на B2B и B2C услугах.">
-  <meta property="og:title" content="SiteSeller AI | Сайт-Продавец с ИИ-Консультантом 24/7">
-  <meta property="og:description" content="Превращает посетителей в готовые заявки в Telegram, пока вы работаете или отдыхаете. Подходит для любого бизнеса на B2B и B2C услугах.">
+  <meta name="description" content="АГЕНТ24 — ИИ-отдел продаж для вашего сайта 24/7. Превращает посетителей в готовые заявки в Telegram, пока вы работаете или отдыхаете. Пилот 14 дней бесплатно.">
+  <meta property="og:title" content="АГЕНТ24 | ИИ-отдел продаж 24/7">
+  <meta property="og:description" content="ИИ-агент квалифицирует клиентов, считает смету и отправляет заявки в Telegram 24/7. Пилот 14 дней бесплатно.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#060e0a">
-  <title>SiteSeller AI | Сайт-Продавец с ИИ-Консультантом 24/7</title>
+  <title>АГЕНТ24 | ИИ-отдел продаж 24/7</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2069,9 +2069,6 @@
         padding: 36px 24px;
         gap: 36px;
       }
-      .cta-contacts-grid {
-        grid-template-columns: 1fr;
-      }
       .compare-container {
         grid-template-columns: 1fr;
         padding: 24px;
@@ -2116,57 +2113,34 @@
         padding: 24px 18px;
       }
     }
-  
+
     body {
       background: linear-gradient(135deg, #060e0a 0%, #0e1b14 50%, #08120c 100%) !important;
     }
 
-    .feature-card,
-    .metric-card,
+    .niche-card,
+    .benefit-card,
     .process-card,
     .review-card,
-    .faq-item,
-    .simulator-card,
-    .niche-card,
-    .niche-showcase,
-    .compare-card,
-    .calc-card,
-    .cta-box,
-    .cta-tg-card,
-    .cta-call-request-btn,
+    .compare-container,
+    .cta-container,
     .callback-card,
     .chat-window,
-    .stat-badge,
-    .niche-tab,
-    .phone-mockup {
+    .stat-card {
       background: rgba(18, 30, 23, 0.6) !important;
       border: 1px solid rgba(212, 175, 55, 0.3) !important;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
 
-    .feature-card:hover,
-    .metric-card:hover,
-    .process-card:hover,
-    .review-card:hover,
-    .faq-item:hover,
-    .niche-card:hover,
-    .compare-card:hover,
-    .cta-tg-card:hover {
-      border-color: rgba(212, 175, 55, 0.65) !important;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.25) !important;
-    }
-
     .btn-glow,
-    .btn-primary,
-    .cta-btn,
-    .hero-btn,
-    .calc-btn,
-    .msb-ai-btn,
-    .chat-send,
     .btn-callback-nav,
     #callbackSubmitBtn,
-    #leadSubmitBtn {
+    #leadSubmitBtn,
+    .btn-submit,
+    .msb-ai-btn,
+    .chat-send,
+    .chat-toggle {
       background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%) !important;
       color: #000000 !important;
       font-weight: bold !important;
@@ -2174,39 +2148,10 @@
       border: 1px solid rgba(255, 240, 180, 0.45) !important;
     }
 
-    .btn-glow:hover,
-    .btn-primary:hover,
-    .cta-btn:hover,
-    .hero-btn:hover,
-    .calc-btn:hover,
-    .msb-ai-btn:hover,
-    .chat-send:hover,
-    .btn-callback-nav:hover,
-    #callbackSubmitBtn:hover,
-    #leadSubmitBtn:hover {
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.65) !important;
-      filter: brightness(1.1) !important;
-      transform: translateY(-2px);
-    }
-
-    .accent-gold, .icon-gold, .stat-num, .stat-number, .roi-number, .review-highlight, .feature-icon-gold, .highlight-gold {
-      color: #d4af37 !important;
-    }
-
-    .accent-emerald, .icon-emerald, .tag-active, .check-icon, .status-live, .benefit-icon, .badge-emerald {
-      color: #10b981 !important;
-    }
-
     .form-input {
       background: rgba(10, 18, 14, 0.8) !important;
       border: 1px solid rgba(212, 175, 55, 0.3) !important;
       color: #ffffff !important;
-    }
-
-    .form-input:focus {
-      border-color: #d4af37 !important;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.35) !important;
-      outline: none;
     }
 
     .mobile-sticky-bar {
@@ -2216,64 +2161,11 @@
       -webkit-backdrop-filter: blur(20px);
     }
 
-    .msb-ai-btn {
-      background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%) !important;
-      color: #000000 !important;
-      font-weight: bold !important;
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4) !important;
-    }
-
     .msb-tg-btn {
       background: rgba(16, 185, 129, 0.16) !important;
       border: 1px solid rgba(212, 175, 55, 0.4) !important;
       color: #10b981 !important;
     }
-
-    .msb-tg-btn:hover {
-      background: rgba(16, 185, 129, 0.28) !important;
-      color: #fef08a !important;
-      border-color: #d4af37 !important;
-    }
-
-    .chat-trigger {
-      background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%) !important;
-      color: #000000 !important;
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.5) !important;
-      border: 1px solid rgba(255, 240, 180, 0.5) !important;
-    }
-
-    .chat-header {
-      background: linear-gradient(135deg, rgba(14, 27, 20, 0.98), rgba(20, 36, 26, 0.98)) !important;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
-    }
-
-    .chat-header-title {
-      color: #d4af37 !important;
-    }
-
-    .chat-bubble.bot {
-      background: rgba(22, 38, 29, 0.85) !important;
-      border: 1px solid rgba(212, 175, 55, 0.25) !important;
-      color: #f3f4f6 !important;
-    }
-
-    .chat-bubble.user {
-      background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%) !important;
-      color: #000000 !important;
-      font-weight: 600 !important;
-      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25) !important;
-    }
-
-    .chat-input {
-      background: rgba(8, 16, 12, 0.85) !important;
-      border: 1px solid rgba(212, 175, 55, 0.3) !important;
-      color: #ffffff !important;
-    }
-
-    .chat-input:focus {
-      border-color: #d4af37 !important;
-    }
-
   </style>
 </head>
 <body>
@@ -2284,9 +2176,10 @@
 
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="«Сайт-Продавец», на главную">
-        <span class="brand-mark">✦</span>
-        <span>Сайт-Продавец</span>
+      <a class="brand" href="#top" aria-label="АГЕНТ24, на главную">
+        <span class="brand-mark">⚡</span>
+        <span>АГЕНТ<span style="color: var(--primary);">24</span></span>
+        <span class="brand-badge">ИИ-ОТДЕЛ ПРОДАЖ</span>
       </a>
 
       <nav class="nav-links" aria-label="Основная навигация">
@@ -2327,15 +2220,15 @@
               <span class="status-dot"></span>
               <span class="status-ring"></span>
             </span>
-            <span>ИИ-агент готов к работе с вашими клиентами</span>
+            <span>🎯 Пилот 14 дней: если ИИ не принесёт ни одной заявки — бесплатно</span>
           </div>
 
           <h1 id="hero-title">
-            Сайт-продавец нового поколения <span class="text-gradient">с ИИ-агентом 24/7</span>
+            ИИ-отдел продаж для вашего сайта <span class="text-gradient">24/7</span>
           </h1>
 
           <p class="hero-subtitle">
-            Превращает посетителей в готовые заявки в Telegram, пока вы работаете или отдыхаете. Подходит для любого бизнеса на B2B и B2C услугах.
+            АГЕНТ24 квалифицирует клиентов, рассчитывает стоимость и отправляет готовые заявки в ваш Telegram. Работает круглосуточно без зарплаты и отгулов.
           </p>
 
           <div class="hero-actions">
@@ -2373,7 +2266,7 @@
             </div>
             <div class="sim-status-pill">
               <span class="status-dot" style="width: 6px; height: 6px;"></span>
-              <span>ИИ-консультант онлайн 24/7</span>
+              <span>ИИ-консультант АГЕНТ24 онлайн</span>
             </div>
           </div>
 
@@ -2440,7 +2333,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-kicker">Универсальность для любого бизнеса</span>
-          <h2 class="section-title" id="niches-title">ИИ-продавец адаптирован под специфику вашей сферы</h2>
+          <h2 class="section-title" id="niches-title">АГЕНТ24 адаптирован под специфику вашей сферы</h2>
           <p class="section-desc">Агент загружает ваш прайс-лист, частые вопросы, регламенты и ведёт разговор профессионально, словно ваш лучший менеджер по продажам.</p>
         </div>
 
@@ -2567,9 +2460,9 @@
     <section class="section" id="benefits" aria-labelledby="benefits-title">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">Почему сайт-продавец окупается в первый месяц</span>
-          <h2 class="section-title" id="benefits-title">Обычные сайты теряют до 80% заявок.<br>ИИ-агент доводит посетителей до сделки</h2>
-          <p class="section-desc">Пока конкуренты перезванивают на следующий рабочий день, ваш сайт отвечает моментально и забирает клиентов себе.</p>
+          <span class="section-kicker">Почему АГЕНТ24 окупается в первый месяц</span>
+          <h2 class="section-title" id="benefits-title">Обычные сайты теряют до 80% заявок.<br>АГЕНТ24 доводит посетителей до сделки</h2>
+          <p class="section-desc">Пока конкуренты перезванивают на следующий рабочий день, АГЕНТ24 отвечает моментально и забирает клиентов себе.</p>
         </div>
 
         <div class="benefits-grid">
@@ -2610,7 +2503,7 @@
           </div>
 
           <div class="compare-side good">
-            <span class="compare-badge">Новый уровень: «Сайт-Продавец с ИИ»</span>
+            <span class="compare-badge">Новый уровень: АГЕНТ24</span>
             <ul class="compare-list">
               <li class="compare-item">✓ <b>Живой диалог:</b> интерактивный виджет вовлекает и удерживает внимание с первых секунд.</li>
               <li class="compare-item">✓ <b>Ответ за 5 секунд:</b> консультация по прайсу в любое время суток 24/7/365.</li>
@@ -2660,7 +2553,7 @@
         <div class="section-header">
           <span class="section-kicker">Реальный опыт и цифры</span>
           <h2 class="section-title" id="reviews-title">Отзывы клиентов и результаты внедрения</h2>
-          <p class="section-desc">Посмотрите, как сайты-продавцы с обученным ИИ-консультантом окупают себя и увеличивают выручку в реальном бизнесе.</p>
+          <p class="section-desc">Посмотрите, как сайты с обученным АГЕНТ24 окупают себя и увеличивают выручку в реальном бизнесе.</p>
         </div>
 
         <div class="reviews-grid">
@@ -2800,8 +2693,8 @@
         <div class="cta-container">
           <div class="cta-left">
             <span class="section-kicker">Индивидуальный расчет</span>
-            <h2 id="cta-title">Получите прототип и смету сайта-продавца под вашу нишу</h2>
-            <p>Оставьте контакты или протестируйте ИИ-консультанта прямо на сайте. Мы покажем, как система увеличит поток ваших клиентов.</p>
+            <h2 id="cta-title">Получите прототип и смету АГЕНТ24 под вашу нишу</h2>
+            <p>Оставьте контакты или протестируйте ИИ-консультанта прямо на сайте. Мы покажем, как АГЕНТ24 увеличит поток ваших клиентов.</p>
 
             <button class="btn-glow" type="button" data-open-chat style="min-height: 50px; padding: 0 24px; font-size: 15px;">
               <span>Открыть чат с ИИ-консультантом</span>
@@ -2837,7 +2730,7 @@
 
           <div class="lead-form-box">
             <div class="lead-form-title">Быстрая заявка на аудит</div>
-            <div class="lead-form-desc">Рассчитаем стоимость внедрения и покажем пример диалога ИИ под ваш прайс.</div>
+            <div class="lead-form-desc">Рассчитаем стоимость внедрения АГЕНТ24 и покажем пример диалога ИИ под ваш прайс.</div>
 
             <form id="landingLeadForm" onsubmit="handleLeadSubmit(event)">
               <div class="form-group">
@@ -2872,8 +2765,8 @@
     <div class="container">
       <div class="footer-top">
         <a class="brand" href="#top">
-          <span class="brand-mark">✦</span>
-          <span>Сайт-Продавец</span>
+          <span class="brand-mark">⚡</span>
+          <span>АГЕНТ24</span>
         </a>
         <div class="footer-links">
           <a href="#simulator">Симулятор</a>
@@ -2886,7 +2779,7 @@
       </div>
 
       <div class="footer-legal-box">
-        <p>© 2026 «Сайт-Продавец». Все права защищены. Разработка сайтов-продавцов с обученными ИИ-консультантами 24/7 для B2B и B2C бизнеса.</p>
+        <p>© 2026 АГЕНТ24. Все права защищены. ИИ-отдел продаж 24/7 для B2B и B2C бизнеса.</p>
         <p style="margin-top: 6px;">
           Информация на сайте носит исключительно ознакомительный характер и не является публичной офертой (ст. 437 ГК РФ).
         </p>
@@ -2900,7 +2793,7 @@
         </div>
 
         <div style="text-align: center; padding: 15px; font-size: 12px; color: rgba(255,255,255,0.4);">
-          Сайт создан на платформе <a href="https://siteseller.vercel.app" target="_blank" style="color: #D4AF37; text-decoration: none; font-weight: 600;">SiteSeller AI</a> — ИИ-продавцы 24/7
+          Сайт создан на платформе <a href="https://agent24ai.ru" target="_blank" style="color: #D4AF37; text-decoration: none; font-weight: 600;">АГЕНТ24</a> — ИИ-отдел продаж 24/7
         </div>
       </div>
     </div>
@@ -2908,7 +2801,7 @@
 
   <div class="mobile-sticky-bar" id="mobileStickyBar" aria-label="Быстрые действия на мобильном">
     <button class="msb-ai-btn" type="button" data-open-chat>
-      <span class="msb-ai-spark">✦</span>
+      <span class="msb-ai-spark">⚡</span>
       <span>Задать вопрос ИИ</span>
     </button>
     <a class="msb-tg-btn" href="https://t.me/cyberkrona" target="_blank" rel="noopener">
@@ -2954,9 +2847,9 @@
     <div class="chat-window" role="dialog" aria-modal="false" aria-labelledby="chatTitle">
       <div class="chat-head">
         <div class="chat-head__person">
-          <div class="chat-head__avatar">✦</div>
+          <div class="chat-head__avatar">⚡</div>
           <div>
-            <strong id="chatTitle">ИИ-консультант «Сайт-Продавец»</strong>
+            <strong id="chatTitle">ИИ-консультант АГЕНТ24</strong>
             <small><span class="online-indicator"></span>Онлайн 24/7 • Отвечает за 5 сек</small>
           </div>
         </div>
@@ -2980,14 +2873,14 @@
     </div>
 
     <button class="chat-toggle" id="chatToggle" type="button" aria-expanded="false" aria-controls="chatWidget">
-      <span class="chat-toggle__icon">✦</span>
+      <span class="chat-toggle__icon">⚡</span>
       <span>ИИ-консультант</span>
     </button>
   </aside>
 
   <script>
     const N8N_WEBHOOK_URL = 'https://germes777.app.n8n.cloud/webhook/website-ai-chat';
-    const WELCOME_MESSAGE = 'Здравствуйте! Я ИИ-консультант платформы «Сайт-Продавец». Расскажите кратко о вашей задаче, и я за 2 минуты подготовлю предварительную структуру и смету для вашего сайта!';
+    const WELCOME_MESSAGE = 'Здравствуйте! Я ИИ-консультант АГЕНТ24. Расскажите кратко о вашей задаче, и я за 2 минуты подготовлю предварительную структуру и смету для вашего сайта!';
 
     const widget = document.getElementById('chatWidget');
     const toggle = document.getElementById('chatToggle');
