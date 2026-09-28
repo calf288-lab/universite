@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СтройАлтай — Дома из кедра и отделка под ключ на Алтае</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 800; }
+        .phone { font-size: 24px; font-weight: 700; color: #ffd23f; text-decoration: none; }
+        .hero { padding: 80px 0; }
+        .hero h1 { font-size: clamp(32px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+        .hero-subtitle { font-size: 20px; opacity: 0.9; max-width: 700px; margin-bottom: 40px; }
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(135deg, #c48e58, #e5b88a);
+            color: #1e3c72;
+        }
+        .ai-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        .ai-widget-button {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c48e58, #e5b88a);
+            border: none;
+            cursor: pointer;
+            font-size: 32px;
+            box-shadow: 0 8px 30px rgba(196,142,88,0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🏔️ СТРОЙАЛТАЙ</div>
+                <a href="tel:+79317777223" class="phone">+7 (931) 777-72-23</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Строительство домов, бань и отделка квартир на Алтае</h1>
+            <p class="hero-subtitle">
+                Возводим капитальные дома и бани из алтайского кедра. 
+                В зимний сезон выполняем срочный ремонт квартир под ключ.
+            </p>
+            <button class="btn" onclick="document.getElementById('aiChat').style.display='block'">
+                💬 Рассчитать стоимость за 1 минуту
+            </button>
+        </div>
+    </section>
+    
+    <div class="ai-widget">
+        <button class="ai-widget-button" onclick="document.getElementById('aiChat').style.display='block'">💬</button>
+        <div id="aiChat" style="display:none;position:absolute;bottom:80px;right:0;width:400px;height:550px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+            <iframe src="https://www.agent24ai.ru/" style="width:100%;height:100%;border:none;border-radius:20px;"></iframe>
+        </div>
+    </div>
+</body>
+</html>
