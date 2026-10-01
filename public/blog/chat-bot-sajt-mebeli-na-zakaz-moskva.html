@@ -192,6 +192,76 @@ ul,ol{margin-bottom:24px;padding-left:24px}li{margin-bottom:8px;color:#334155}
 <p>Для мебельного салона можно начать без масштабного изменения сайта. Сначала создаётся демонстрационный сценарий на одной категории, например «Кухни на заказ». В него закладываются основные параметры проекта, правила ориентировочного расчёта, вопросы квалификации, передача контакта, уведомление менеджера, аналитика действий. После проверки сценарий можно расширить на шкафы, гардеробные, гостиные, спальни или коммерческую мебель.</p>
 <p>Цель первого этапа — не заменить весь сайт. Цель — проверить гипотезу на реальном трафике и увидеть, сколько посетителей готовы пройти короткий расчёт вместо стандартной формы.</p>
 <p><strong>Демо-бот на вашем сайте за 48 часов.</strong> Покажем сценарий расчёта стоимости на конкретном ассортименте вашей компании. Бот можно поставить на отдельную страницу или протестировать на действующей посадочной странице. Напишите в Telegram: @agent24ai.</p>
+<h2>JSON-LD</h2>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@graph&quot;: [
+    {
+      &quot;@type&quot;: &quot;Article&quot;,
+      &quot;@id&quot;: &quot;https://www.agent24ai.ru/blog/chat-bot-sajt-mebeli-na-zakaz-moskva.html#article&quot;,
+      &quot;mainEntityOfPage&quot;: {
+        &quot;@type&quot;: &quot;WebPage&quot;,
+        &quot;@id&quot;: &quot;https://www.agent24ai.ru/blog/chat-bot-sajt-mebeli-na-zakaz-moskva.html&quot;
+      },
+      &quot;headline&quot;: &quot;Чат-бот для сайта мебели на заказ в Москве: как увеличить заявки с 1,2% до 3,5%&quot;,
+      &quot;description&quot;: &quot;Чат-бот для сайта мебели на заказ в Москве: как увеличить заявки с 1,2% до 3,5%... Практическое руководство по внедрению ИИ-агентов для бизнеса.&quot;,
+      &quot;inLanguage&quot;: &quot;ru-RU&quot;,
+      &quot;datePublished&quot;: &quot;2026-10-01&quot;,
+      &quot;dateModified&quot;: &quot;2026-10-01&quot;,
+      &quot;author&quot;: {
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;agent24ai.ru&quot;,
+        &quot;url&quot;: &quot;https://www.agent24ai.ru&quot;
+      },
+      &quot;publisher&quot;: {
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;agent24ai.ru&quot;,
+        &quot;url&quot;: &quot;https://www.agent24ai.ru&quot;,
+        &quot;logo&quot;: {
+          &quot;@type&quot;: &quot;ImageObject&quot;,
+          &quot;url&quot;: &quot;https://www.agent24ai.ru/logo.png&quot;
+        }
+      },
+      &quot;keywords&quot;: [
+        &quot;ИИ-агент&quot;,
+        &quot;автоматизация продаж&quot;,
+        &quot;n8n&quot;,
+        &quot;квалификация лидов&quot;
+      ]
+    },
+    {
+      &quot;@type&quot;: &quot;FAQPage&quot;,
+      &quot;@id&quot;: &quot;https://www.agent24ai.ru/blog/chat-bot-sajt-mebeli-na-zakaz-moskva.html#faq&quot;,
+      &quot;mainEntity&quot;: [
+        {
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;name&quot;: &quot;Заменит ли ИИ-агент менеджеров по продажам?&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;@type&quot;: &quot;Answer&quot;,
+            &quot;text&quot;: &quot;Нет. Агент берёт первичную квалификацию, типовые вопросы и заполнение CRM. Замер, переговоры и закрытие сделки остаются за менеджером.&quot;
+          }
+        },
+        {
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;name&quot;: &quot;Сколько стоит внедрение ИИ-агента?&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;@type&quot;: &quot;Answer&quot;,
+            &quot;text&quot;: &quot;Зависит от сложности интеграции. Базовый пакет квалификации лидов на n8n + LLM + CRM оценивается индивидуально после аудита воронки.&quot;
+          }
+        },
+        {
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;name&quot;: &quot;Как быстро окупается автоматизация?&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;@type&quot;: &quot;Answer&quot;,
+            &quot;text&quot;: &quot;При сокращении времени ответа до секунд и росте конверсии в договор окупаемость наступает за 1–3 месяца. Точный расчёт делаем на бесплатном аудите.&quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
 
 <div id="agent24-calc" style="background:#0f172a;border:1px solid #1e3a8a;border-radius:14px;padding:28px;color:#fff;font-family:Inter,sans-serif;max-width:640px;margin:48px auto;box-shadow:0 10px 30px rgba(37,99,235,.25)">
   <h3 style="color:#38bdf8;margin:0 0 6px;font-size:21px">Калькулятор потерь отдела продаж</h3>

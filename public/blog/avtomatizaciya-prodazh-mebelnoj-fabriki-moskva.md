@@ -104,3 +104,77 @@ Telegram / MAX / WhatsApp / виджет сайта / Instagram / звонки �
 **Как измерить эффект?** Первые 30 дней поток делится на две группы: одну обрабатывает агент, другую менеджеры. Сравниваются время первого ответа, доля заполненных полей, конверсия в квалифицированный лид и в договор.
 
 **Как решается вопрос с персональными данными?** Обработка и хранение организуются по 152-ФЗ. Серверы и интеграции с CRM размещаются на территории РФ.
+
+
+## JSON-LD
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.agent24ai.ru/blog/avtomatizaciya-prodazh-mebelnoj-fabriki-moskva.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.agent24ai.ru/blog/avtomatizaciya-prodazh-mebelnoj-fabriki-moskva.html"
+      },
+      "headline": "Автоматизация продаж мебельной фабрики в Москве: +1,3 млн ₽ выручки в месяц от скорости ответа лиду",
+      "description": "Автоматизация продаж мебельной фабрики в Москве: +1,3 млн ₽ выручки в месяц от скорости ответа лиду... Практическое руководство по внедрению ИИ-агентов для бизнеса.",
+      "inLanguage": "ru-RU",
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-01",
+      "author": {
+        "@type": "Organization",
+        "name": "agent24ai.ru",
+        "url": "https://www.agent24ai.ru"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "agent24ai.ru",
+        "url": "https://www.agent24ai.ru",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.agent24ai.ru/logo.png"
+        }
+      },
+      "keywords": [
+        "ИИ-агент",
+        "автоматизация продаж",
+        "n8n",
+        "квалификация лидов"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.agent24ai.ru/blog/avtomatizaciya-prodazh-mebelnoj-fabriki-moskva.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Заменит ли ИИ-агент менеджеров по продажам?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Агент берёт первичную квалификацию, типовые вопросы и заполнение CRM. Замер, переговоры и закрытие сделки остаются за менеджером."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит внедрение ИИ-агента?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зависит от сложности интеграции. Базовый пакет квалификации лидов на n8n + LLM + CRM оценивается индивидуально после аудита воронки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как быстро окупается автоматизация?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При сокращении времени ответа до секунд и росте конверсии в договор окупаемость наступает за 1–3 месяца. Точный расчёт делаем на бесплатном аудите."
+          }
+        }
+      ]
+    }
+  ]
+}
+```

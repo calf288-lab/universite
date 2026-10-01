@@ -118,3 +118,77 @@
 Цель первого этапа — не заменить весь сайт. Цель — проверить гипотезу на реальном трафике и увидеть, сколько посетителей готовы пройти короткий расчёт вместо стандартной формы.
 
 **Демо-бот на вашем сайте за 48 часов.** Покажем сценарий расчёта стоимости на конкретном ассортименте вашей компании. Бот можно поставить на отдельную страницу или протестировать на действующей посадочной странице. Напишите в Telegram: @agent24ai.
+
+
+## JSON-LD
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.agent24ai.ru/blog/chat-bot-sajt-mebeli-na-zakaz-moskva.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.agent24ai.ru/blog/chat-bot-sajt-mebeli-na-zakaz-moskva.html"
+      },
+      "headline": "Чат-бот для сайта мебели на заказ в Москве: как увеличить заявки с 1,2% до 3,5%",
+      "description": "Чат-бот для сайта мебели на заказ в Москве: как увеличить заявки с 1,2% до 3,5%... Практическое руководство по внедрению ИИ-агентов для бизнеса.",
+      "inLanguage": "ru-RU",
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-01",
+      "author": {
+        "@type": "Organization",
+        "name": "agent24ai.ru",
+        "url": "https://www.agent24ai.ru"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "agent24ai.ru",
+        "url": "https://www.agent24ai.ru",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.agent24ai.ru/logo.png"
+        }
+      },
+      "keywords": [
+        "ИИ-агент",
+        "автоматизация продаж",
+        "n8n",
+        "квалификация лидов"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.agent24ai.ru/blog/chat-bot-sajt-mebeli-na-zakaz-moskva.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Заменит ли ИИ-агент менеджеров по продажам?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Агент берёт первичную квалификацию, типовые вопросы и заполнение CRM. Замер, переговоры и закрытие сделки остаются за менеджером."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит внедрение ИИ-агента?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зависит от сложности интеграции. Базовый пакет квалификации лидов на n8n + LLM + CRM оценивается индивидуально после аудита воронки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как быстро окупается автоматизация?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При сокращении времени ответа до секунд и росте конверсии в договор окупаемость наступает за 1–3 месяца. Точный расчёт делаем на бесплатном аудите."
+          }
+        }
+      ]
+    }
+  ]
+}
+```

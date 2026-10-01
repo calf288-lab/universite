@@ -108,3 +108,77 @@
 Для дизайн-студии не нужна универсальная CRM-схема. Нужен workflow, который учитывает ваши источники заявок, CRM, роли менеджеров, этапы воронки, правила перезвона и существующие регламенты.
 
 **Схема автоматизации под вашу студию бесплатно.** Покажем, где можно убрать ручной перенос данных, какие действия автоматизировать через n8n и где поставить контроль просроченных заявок. Напишите в Telegram: @agent24ai.
+
+
+## JSON-LD
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.agent24ai.ru/blog/crm-avtomatizaciya-dizajn-studii-moskva.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.agent24ai.ru/blog/crm-avtomatizaciya-dizajn-studii-moskva.html"
+      },
+      "headline": "CRM-автоматизация для дизайн-студии интерьеров в Москве: как убрать потери заявок и ручной перенос данных",
+      "description": "CRM-автоматизация для дизайн-студии интерьеров в Москве: как убрать потери заявок и ручной перенос д... Практическое руководство по внедрению ИИ-агентов для бизнеса.",
+      "inLanguage": "ru-RU",
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-01",
+      "author": {
+        "@type": "Organization",
+        "name": "agent24ai.ru",
+        "url": "https://www.agent24ai.ru"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "agent24ai.ru",
+        "url": "https://www.agent24ai.ru",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.agent24ai.ru/logo.png"
+        }
+      },
+      "keywords": [
+        "ИИ-агент",
+        "автоматизация продаж",
+        "n8n",
+        "квалификация лидов"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.agent24ai.ru/blog/crm-avtomatizaciya-dizajn-studii-moskva.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Заменит ли ИИ-агент менеджеров по продажам?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Агент берёт первичную квалификацию, типовые вопросы и заполнение CRM. Замер, переговоры и закрытие сделки остаются за менеджером."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит внедрение ИИ-агента?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зависит от сложности интеграции. Базовый пакет квалификации лидов на n8n + LLM + CRM оценивается индивидуально после аудита воронки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как быстро окупается автоматизация?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При сокращении времени ответа до секунд и росте конверсии в договор окупаемость наступает за 1–3 месяца. Точный расчёт делаем на бесплатном аудите."
+          }
+        }
+      ]
+    }
+  ]
+}
+```

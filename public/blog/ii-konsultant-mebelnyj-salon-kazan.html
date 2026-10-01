@@ -175,6 +175,76 @@ ul,ol{margin-bottom:24px;padding-left:24px}li{margin-bottom:8px;color:#334155}
 <p><strong>Что делает консультант, если не знает ответа?</strong> Не придумывает. Фиксирует вопрос в карточке, сообщает клиенту, что специалист ответит в рабочее время, и ставит задачу менеджеру.</p>
 <p><strong>Как измерить эффект теста?</strong> В тесте консультант обрабатывает нерабочее время, менеджеры работают как раньше. Сравниваются время первого ответа, доля записей на замер и заполненность карточек с baseline за прошлые месяцы.</p>
 <p><strong>Как решается вопрос с персональными данными?</strong> Обработка и хранение организуются по 152-ФЗ. Серверы и интеграции с CRM размещаются на территории РФ.</p>
+<h2>JSON-LD</h2>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@graph&quot;: [
+    {
+      &quot;@type&quot;: &quot;Article&quot;,
+      &quot;@id&quot;: &quot;https://www.agent24ai.ru/blog/ii-konsultant-mebelnyj-salon-kazan.html#article&quot;,
+      &quot;mainEntityOfPage&quot;: {
+        &quot;@type&quot;: &quot;WebPage&quot;,
+        &quot;@id&quot;: &quot;https://www.agent24ai.ru/blog/ii-konsultant-mebelnyj-salon-kazan.html&quot;
+      },
+      &quot;headline&quot;: &quot;ИИ-консультант для мебельного салона в Казани: вернуть до 810 000 ₽ выручки в месяц от ночных и выходных заявок&quot;,
+      &quot;description&quot;: &quot;ИИ-консультант для мебельного салона в Казани: вернуть до 810 000 ₽ выручки в месяц от ночных и выхо... Практическое руководство по внедрению ИИ-агентов для бизнеса.&quot;,
+      &quot;inLanguage&quot;: &quot;ru-RU&quot;,
+      &quot;datePublished&quot;: &quot;2026-10-01&quot;,
+      &quot;dateModified&quot;: &quot;2026-10-01&quot;,
+      &quot;author&quot;: {
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;agent24ai.ru&quot;,
+        &quot;url&quot;: &quot;https://www.agent24ai.ru&quot;
+      },
+      &quot;publisher&quot;: {
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;agent24ai.ru&quot;,
+        &quot;url&quot;: &quot;https://www.agent24ai.ru&quot;,
+        &quot;logo&quot;: {
+          &quot;@type&quot;: &quot;ImageObject&quot;,
+          &quot;url&quot;: &quot;https://www.agent24ai.ru/logo.png&quot;
+        }
+      },
+      &quot;keywords&quot;: [
+        &quot;ИИ-агент&quot;,
+        &quot;автоматизация продаж&quot;,
+        &quot;n8n&quot;,
+        &quot;квалификация лидов&quot;
+      ]
+    },
+    {
+      &quot;@type&quot;: &quot;FAQPage&quot;,
+      &quot;@id&quot;: &quot;https://www.agent24ai.ru/blog/ii-konsultant-mebelnyj-salon-kazan.html#faq&quot;,
+      &quot;mainEntity&quot;: [
+        {
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;name&quot;: &quot;Заменит ли ИИ-агент менеджеров по продажам?&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;@type&quot;: &quot;Answer&quot;,
+            &quot;text&quot;: &quot;Нет. Агент берёт первичную квалификацию, типовые вопросы и заполнение CRM. Замер, переговоры и закрытие сделки остаются за менеджером.&quot;
+          }
+        },
+        {
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;name&quot;: &quot;Сколько стоит внедрение ИИ-агента?&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;@type&quot;: &quot;Answer&quot;,
+            &quot;text&quot;: &quot;Зависит от сложности интеграции. Базовый пакет квалификации лидов на n8n + LLM + CRM оценивается индивидуально после аудита воронки.&quot;
+          }
+        },
+        {
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;name&quot;: &quot;Как быстро окупается автоматизация?&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;@type&quot;: &quot;Answer&quot;,
+            &quot;text&quot;: &quot;При сокращении времени ответа до секунд и росте конверсии в договор окупаемость наступает за 1–3 месяца. Точный расчёт делаем на бесплатном аудите.&quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
 
 <div id="agent24-calc" style="background:#0f172a;border:1px solid #1e3a8a;border-radius:14px;padding:28px;color:#fff;font-family:Inter,sans-serif;max-width:640px;margin:48px auto;box-shadow:0 10px 30px rgba(37,99,235,.25)">
   <h3 style="color:#38bdf8;margin:0 0 6px;font-size:21px">Калькулятор потерь отдела продаж</h3>
