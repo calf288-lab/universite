@@ -269,28 +269,6 @@ ul,ol{margin-bottom:24px;padding-left:24px}li{margin-bottom:8px;color:#334155}
 }</script>
 
 
-<div style="background:#f8fafc;border:2px solid #2563eb;border-radius:16px;padding:32px;margin:48px auto;max-width:700px;text-align:center;font-family:Inter,sans-serif">
-  <h3 style="color:#0f172a;margin:0 0 12px;font-size:24px">Готовы обсудить внедрение?</h3>
-  <p style="color:#475569;margin:0 0 24px;font-size:16px">Бесплатный аудит воронки за 30 минут. Покажем потери в рублях по вашей CRM.</p>
-  
-  <!-- Основная кнопка -->
-  <a href="https://t.me/agent24ai" target="_blank" rel="noopener noreferrer" 
-     style="display:inline-block;background:#2563eb;color:white;font-weight:700;padding:16px 32px;border-radius:12px;text-decoration:none;font-size:18px;box-shadow:0 4px 12px rgba(37,99,235,.3);transition:transform .2s">
-     💬 Написать в Telegram @agent24ai
-  </a>
-  
-  <!-- Даунселл: Ной AI (для тех, кому дорого кастом) -->
-  <div style="margin-top:24px;padding-top:24px;border-top:1px dashed #cbd5e1">
-    <p style="color:#64748b;font-size:14px;margin:0 0 12px">Или начните с готового решения:</p>
-    <a href="https://noya-ai.ru/?s=8MB4BLCZ" target="_blank" rel="noopener noreferrer sponsored" 
-       style="color:#2563eb;text-decoration:underline;font-weight:600;font-size:15px">
-       ИИ-продавец Noya-AI от 990 ₽/мес
-     </a>
-    <span style="color:#94a3b8;font-size:12px;display:block;margin-top:4px">(партнёрская программа)</span>
-  </div>
-</div>
-
-
 <div id="agent24-calc" style="background:#0f172a;border:1px solid #1e3a8a;border-radius:14px;padding:28px;color:#fff;font-family:Inter,sans-serif;max-width:640px;margin:48px auto;box-shadow:0 10px 30px rgba(37,99,235,.25)">
   <h3 style="color:#38bdf8;margin:0 0 6px;font-size:21px">Калькулятор потерь отдела продаж</h3>
   <p style="color:#94a3b8;font-size:13px;margin:0 0 20px">Модельный расчёт. Точные цифры считаем на аудите по вашей CRM.</p>
@@ -308,18 +286,7 @@ ul,ol{margin-bottom:24px;padding-left:24px}li{margin-bottom:8px;color:#334155}
   </div>
 </div>
 <script>
-function cCalc(){
-  var L=+document.getElementById('c-leads').value||0,
-      C=+document.getElementById('c-check').value||0,
-      T=+document.getElementById('c-time').value||0,
-      drop=T<=5?0:T<=15?.12:T<=30?.2:T<=60?.3:.42,
-      conv=.08,
-      lost=Math.round(L*drop),
-      money=Math.round(lost*conv*C);
-  document.getElementById('c-lost').textContent=lost;
-  document.getElementById('c-money').textContent=money.toLocaleString('ru-RU');
-  document.getElementById('c-res').style.display='block';
-}
+function cCalc(){var L=+document.getElementById('c-leads').value||0,C=+document.getElementById('c-check').value||0,T=+document.getElementById('c-time').value||0,drop=T<=5?0:T<=15?.12:T<=30?.2:T<=60?.3:.42,conv=.08,lost=Math.round(L*drop),money=Math.round(lost*conv*C);document.getElementById('c-lost').textContent=lost;document.getElementById('c-money').textContent=money.toLocaleString('ru-RU');document.getElementById('c-res').style.display='block';}
 </script>
 
 </body>
