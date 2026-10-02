@@ -169,3 +169,104 @@ p { color: var(--color-silver-mist); margin-bottom: 16px; }
   margin-top: 80px;
   text-align: center;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .hero {
+    padding: 40px 16px;
+    min-height: auto;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .card {
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .btn-primary, .btn-ghost {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  /* Fix tables for mobile */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* AGGRESSIVE MOBILE FIX */
+@media (max-width: 768px) {
+  * { box-sizing: border-box !important; }
+  
+  body { 
+    font-size: 16px !important; 
+    line-height: 1.5 !important;
+    overflow-x: hidden !important;
+  }
+  
+  .container, .section, .hero, .nav, .footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin: 0 !important;
+  }
+  
+  h1 { font-size: 32px !important; letter-spacing: -0.02em !important; }
+  h2 { font-size: 24px !important; }
+  h3 { font-size: 20px !important; }
+  p, li, td, th { font-size: 16px !important; }
+  
+  /* Tables scroll horizontally */
+  table { 
+    display: block !important; 
+    overflow-x: auto !important; 
+    white-space: nowrap !important;
+    margin-bottom: 24px !important;
+  }
+  
+  /* Buttons full width */
+  a.btn-primary, a.btn-ghost, button, .cta-tg-card, .msb-tg-btn {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 12px !important;
+    font-size: 16px !important;
+    padding: 16px !important;
+  }
+  
+  /* Cards stack */
+  .card, .card-deep {
+    padding: 20px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  /* Nav becomes column */
+  .nav { flex-direction: column !important; gap: 12px !important; }
+  .nav-links { flex-direction: column !important; width: 100% !important; }
+  .nav-link { display: block !important; text-align: center !important; padding: 8px 0 !important; }
+}
