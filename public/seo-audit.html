@@ -63,6 +63,10 @@
         button:hover {
             transform: translateY(-2px);
         }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
         .features {
             margin-top: 40px;
             padding-top: 30px;
@@ -77,6 +81,29 @@
             font-size: 24px;
             margin-right: 15px;
         }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: none;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+        }
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.1);
+            border-left-color: #f5576c;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -86,8 +113,10 @@
         
         <form id="auditForm">
             <input type="url" id="siteUrl" placeholder="https://yoursite.ru" required>
-            <button type="submit">🚀 Получить аудит</button>
+            <button type="submit" id="submitBtn">🚀 Получить аудит</button>
         </form>
+        
+        <div id="result"></div>
         
         <div class="features">
             <div class="feature">
@@ -99,7 +128,7 @@
                 <span>AI на базе 187 экспертных ролей</span>
             </div>
             <div class="feature">
-                <span class="feature-icon"></span>
+                <span class="feature-icon">📊</span>
                 <span>Конкретные рекомендации по исправлению</span>
             </div>
         </div>
@@ -108,17 +137,53 @@
     <script>
         document.getElementById('auditForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            
             const url = document.getElementById('siteUrl').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const resultDiv = document.getElementById('result');
             
-            // Отправляем заявку в Telegram (замени @agent24ai на свой username)
-            const message = `🔍 Новый запрос на SEO-аудит:\nСайт: ${url}\nВремя: ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Moscow'})}`;
+            // Показываем загрузку
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Анализируем...';
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Анализируем сайт...</p>
+                </div>
+            `;
             
-            // Отправка через Telegram Bot API (если есть токен)
-            // Или можно через webhook на твой сервер
-            alert('Заявка отправлена! Я проанализирую сайт и свяжусь с вами в течение 15 минут.');
-            
-            // Здесь можно добавить отправку на твой сервер или в Telegram
-            // window.location.href = `https://t.me/agent24ai?text=${encodeURIComponent(message)}`;
+            try {
+                const response = await fetch('/api/audit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <h3>✅ Заявка отправлена!</h3>
+                        <p><strong>Сайт:</strong> ${url}</p>
+                        <p><strong>Title:</strong> ${data.data.title}</p>
+                        <p><strong>Description:</strong> ${data.data.description}</p>
+                        <p><strong>H1:</strong> ${data.data.h1}</p>
+                        <hr style="margin: 20px 0; border-color: rgba(255,255,255,0.2);">
+                        <p>Мы проанализируем сайт и свяжемся с вами в течение 15 минут с полным AI-аудитом.</p>
+                    `;
+                } else {
+                    throw new Error(data.error || 'Unknown error');
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <h3>❌ Ошибка</h3>
+                    <p>Произошла ошибка при анализе сайта. Попробуйте позже или напишите нам напрямую: <a href="https://t.me/agent24ai" style="color: #f5576c;">@agent24ai</a></p>
+                `;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '🚀 Получить аудит';
+            }
         });
     </script>
 </body>
