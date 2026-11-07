@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бесплатный AI-аудит сайта — АГЕНТ24</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        input[type="url"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type="url"]:focus {
+            outline: none;
+            border-color: #f5576c;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        .features {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .feature {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Бесплатный AI-аудит сайта</h1>
+        <p class="subtitle">За 5 секунд найду ошибки, которые мешают расти в Яндексе</p>
+        
+        <form id="auditForm">
+            <input type="url" id="siteUrl" placeholder="https://yoursite.ru" required>
+            <button type="submit">🚀 Получить аудит</button>
+        </form>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">⚡</span>
+                <span>Мгновенный анализ за 5 секунд</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🤖</span>
+                <span>AI на базе 187 экспертных ролей</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon"></span>
+                <span>Конкретные рекомендации по исправлению</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('auditForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const url = document.getElementById('siteUrl').value;
+            
+            // Отправляем заявку в Telegram (замени @agent24ai на свой username)
+            const message = `🔍 Новый запрос на SEO-аудит:\nСайт: ${url}\nВремя: ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Moscow'})}`;
+            
+            // Отправка через Telegram Bot API (если есть токен)
+            // Или можно через webhook на твой сервер
+            alert('Заявка отправлена! Я проанализирую сайт и свяжусь с вами в течение 15 минут.');
+            
+            // Здесь можно добавить отправку на твой сервер или в Telegram
+            // window.location.href = `https://t.me/agent24ai?text=${encodeURIComponent(message)}`;
+        });
+    </script>
+</body>
+</html>
